@@ -280,6 +280,10 @@ a {
   font-size: 0.9rem;
 }
 
+.mobile-service-strip {
+  display: none;
+}
+
 .hero-visual {
   position: relative;
   min-height: 470px;
@@ -843,12 +847,12 @@ a {
 
   .hero-inner {
     width: min(100% - 28px, 1180px);
-    gap: 34px;
-    padding: 38px 0 50px;
+    gap: 0;
+    padding: 34px 0 42px;
   }
 
   .hero h1 {
-    font-size: clamp(2.35rem, 11vw, 3.35rem);
+    font-size: clamp(2.15rem, 10.2vw, 3rem);
     line-height: 1.02;
   }
 
@@ -868,24 +872,31 @@ a {
   }
 
   .hero-actions {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
-    margin-top: 26px;
+    margin-top: 24px;
   }
 
   .hero-actions .button {
-    width: 100%;
+    flex: 1 1 150px;
+    min-height: 48px;
+    padding: 0 14px;
   }
 
   .hero-stats {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 10px;
-    margin-top: 30px;
+    margin-top: 28px;
   }
 
   .hero-stats div {
     min-width: 0;
+    padding: 12px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.07);
   }
 
   .hero-stats strong {
@@ -896,6 +907,27 @@ a {
     display: block;
     font-size: 0.78rem;
     line-height: 1.25;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .mobile-service-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
+  }
+
+  .mobile-service-strip span {
+    padding: 8px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.07);
+    font-size: 0.78rem;
+    font-weight: 800;
   }
 
   .support-band,
@@ -967,6 +999,15 @@ a {
   .support-band h2,
   .contact h2 {
     font-size: clamp(1.9rem, 9vw, 2.45rem);
+  }
+
+  .intro {
+    text-align: left;
+  }
+
+  .intro p {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .intro p,
